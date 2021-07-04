@@ -21,6 +21,8 @@ jobs:
           echo "${{github.token}}"
       - name: Cloning our source code here
         uses: actions/checkout@v2
+        with:
+          ref: testing
       - name: Printing directory
         run: |
           pwd
