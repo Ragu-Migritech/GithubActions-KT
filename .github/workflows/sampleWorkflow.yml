@@ -28,5 +28,6 @@ jobs:
           pwd
           ls -a
           ls -lrt
+          git branch
 
 
