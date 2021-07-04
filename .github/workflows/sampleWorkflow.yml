@@ -1,0 +1,11 @@
+name: Sample GIthub Action workflow
+
+on: [push]
+
+jobs:
+  sample-github-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing steps name
+        run: echo "Welcome all"
+
