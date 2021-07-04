@@ -19,5 +19,12 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{github.token}}"
+      - name: Cloning our source code here
+        run: |
+          git clone https://github.com/Ragu-Migritech/GithubActions-KT.git
+      - name: Printing directory
+        run: |
+          pwd
+          ls -lrt
 
 
