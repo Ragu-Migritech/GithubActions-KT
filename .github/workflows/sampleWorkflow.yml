@@ -25,6 +25,7 @@ jobs:
       - name: Printing directory
         run: |
           pwd
+          ls -a
           ls -lrt
 
 
