@@ -29,5 +29,9 @@ jobs:
           ls -a
           ls -lrt
           git branch
+      - name: Installing dependency 
+        run: npm install
+      - name: Running test case
+        run: npm test
 
 

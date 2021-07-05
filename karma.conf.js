@@ -37,8 +37,26 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
+    // browsers: ['Chrome'],
+    browsers: ['ChromeHeadlessCustom'],
+    browserConsoleLogOptions: { level: "debug", format: "%m", terminal: false},
+    customLaunchers: {
+      'ChromeHeadlessCustom': {
+        base: 'Chrome',
+        flags: [
+          '--headless',
+          // Without a remote debugging port, Google Chrome exits immediately.
+          '--remote-debugging-port=9222',
+          // We must disable the Chrome sandbox when running Chrome inside Docker (Chrome's sandbox needs
+          // more permissions than Docker allows by default)
+          // Also: https://github.com/GoogleChrome/puppeteer/issues/560
+          '--no-sandbox',
+          '--disable-setuid-sandbox'
+        ],
+        debug: true
+      }
+    },
+    singleRun: true,
     restartOnFileChange: true
   });
 };
