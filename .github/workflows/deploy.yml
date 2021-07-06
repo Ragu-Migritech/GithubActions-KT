@@ -18,8 +18,10 @@ jobs:
           ls -lrt
       - name: Install dependencies
         run: npm install
+      - name: Running all test case
+        run: npm test
       - name: Build Project
-        run: npm run build
+        run: ng build --prod
       - name: Print directory
         run: |
           ls -lrt
