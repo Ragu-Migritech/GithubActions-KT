@@ -14,3 +14,12 @@ jobs:
         with:
           ref: main
       - name: Print directory
+        run: |
+          ls -lrt
+      - name: Install dependencies
+        run: npm Install
+      - name: Build Project
+        run: npm run Build
+      - name: Print directory
+        run: |
+          ls -lrt
