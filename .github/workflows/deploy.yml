@@ -21,7 +21,14 @@ jobs:
       - name: Running all test case
         run: npm test
       - name: Build Project
-        run: ng build --prod
+        run: npm run build
       - name: Print directory
         run: |
           ls -lrt
+      - name: Installing Surge
+        run: npm install -g surge
+      - name: Deploy to Staging
+        run: surge --project ./dist --domain http://important-reading.surge.sh/
+        env:
+          SURGE_LOGIN: ragupsgtech29@gmail.com
+          SURGE_TOKEN: a4e6d69a325f27b7af7636f7f0d87df1
