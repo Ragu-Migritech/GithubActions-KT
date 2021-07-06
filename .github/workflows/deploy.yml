@@ -26,7 +26,7 @@ jobs:
         run: |
           ls -lrt
       - name: Installing Surge
-        run: npm install -g surge
+        run: sudo npm install -g surge
       - name: Deploy to Staging
         run: surge --project ./dist --domain http://important-reading.surge.sh/
         env:
