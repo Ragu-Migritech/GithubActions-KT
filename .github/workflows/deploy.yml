@@ -28,7 +28,7 @@ jobs:
       - name: Installing Surge
         run: sudo npm install -g surge
       - name: Deploy to Staging
-        run: surge --project ./dist/my-first-project --domain http://important-reading.surge.sh/
+        run: surge --project ./dist/my-first-project --domain ${{ secrets.SURGE_URL }}
         env:
-          SURGE_LOGIN: ragupsgtech29@gmail.com
-          SURGE_TOKEN: a4e6d69a325f27b7af7636f7f0d87df11
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
