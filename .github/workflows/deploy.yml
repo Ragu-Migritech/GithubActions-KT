@@ -31,4 +31,4 @@ jobs:
         run: surge --project ./dist/my-first-project --domain http://important-reading.surge.sh/
         env:
           SURGE_LOGIN: ragupsgtech29@gmail.com
-          SURGE_TOKEN: a4e6d69a325f27b7af7636f7f0d87df1
+          SURGE_TOKEN: a4e6d69a325f27b7af7636f7f0d87df11
